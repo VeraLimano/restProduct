@@ -36,15 +36,27 @@ public class ProductController {
         }
     }
 
-    @PostMapping("/products")
+    @PostMapping("/productsAdd")
     public void add(@RequestBody Product product) {
         service.save(product);
     }
 
-    @PutMapping("/products/{id}")
-    public ResponseEntity<?> update(@RequestBody Product product, @PathVariable Integer id) {
+////    @PutMapping("/productsEdit/{id}")
+//    @PutMapping("/productsEdit")
+//    public ResponseEntity<?> update(@RequestBody Product product, @PathVariable Integer id) {
+//        try {
+//            Product existProduct = service.get(id);
+//            service.save(product);
+//            return new ResponseEntity<>(HttpStatus.OK);
+//        } catch (NoSuchElementException e) {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+
+    //    @PutMapping("/productsEdit/{id}")
+    @PutMapping("/productsEdit")
+    public ResponseEntity<?> update(@RequestBody Product product) {
         try {
-            Product existProduct = service.get(id);
             service.save(product);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
@@ -52,7 +64,29 @@ public class ProductController {
         }
     }
 
-    @DeleteMapping("/products/{id}")
+//    //    @PutMapping("/productsEdit/{id}")
+//    @PutMapping("/productsEdit")
+//    public ResponseEntity<?> update(@RequestBody Product product, @PathVariable Integer id) {
+//        try {
+//            Product existProduct = service.get(id);
+//            service.save(product);
+//            return new ResponseEntity<>(HttpStatus.OK);
+//        } catch (NoSuchElementException e) {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+
+//    @DeleteMapping("/products/{id}")
+//    public void delete(@PathVariable Integer id) {
+//        service.delete(id);
+//    }
+
+//    @DeleteMapping("/productsDelete")
+//    public void delete(@RequestBody Product product) {
+//        service.delete(product);
+//    }
+
+    @DeleteMapping("/productsDelete/{id}")
     public void delete(@PathVariable Integer id) {
         service.delete(id);
     }

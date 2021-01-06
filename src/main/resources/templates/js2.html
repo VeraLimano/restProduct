@@ -8,44 +8,70 @@
 <!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
 </head>
 <body>
-<!--<ul class="post">-->
-
-<!--</ul>-->
 
 <table class="table table-striped">
     <thead>
     <tr>
         <th>Id</th>
-        <th>name</th>
-        <th>price</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     </thead>
-    <tbody class="post"></tbody>
+    <tbody id="table"></tbody>
 </table>
-<!--<script>-->
-<!--    fetch('http://localhost:8080/products')-->
-<!--        .then((response) => {-->
-<!--            return response.json();-->
-<!--        })-->
-<!--        .then((data) => {-->
-<!--            console.log(data);-->
-<!--            let list = document.querySelector('.post');-->
-<!--            let key;-->
 
-<!--            for (key in data) {-->
-<!--                list.innerHTML +=-->
-<!--                    `<tr class="post">-->
-<!--                <th>${data[key].id}</th>-->
-<!--                <th>${data[key].name}</th>-->
-<!--                <th>${data[key].price}</th>-->
-<!--            </tr>`-->
-<!--            }-->
-<!--        });-->
-<!--</script>-->
+<br>
+<form id="add">
+    Name <input name="name1" type="text" class="form-control" id="name2">
+    Price <input name="price1" type="text" class="form-control" id="price2">
+    <button type="submit" class="btn btn-success">Add product</button>
+</form>
 
-<script src="js2.js"></script>
+<br>
+<form id="editPR">
+    Id <input name="id1" type="text" class="form-control" id="idED">
+    Name <input name="name1" type="text" class="form-control" id="nameED">
+    Price <input name="price1" type="text" class="form-control" id="priceED">
+    <button type="submit" class="btn btn-success">Edit product</button>
+</form>
+
+<br>
+<form id="deletePR">
+    Id <input name="id1" type="text" class="form-control" id="idDEL">
+    <button type="submit" class="btn btn-success">Delete product</button>
+</form>
+
+
+
+
+
+<!--<div id="prompt-form-container">-->
+<!--    <form id="prompt-form">-->
+<!--        <div id="prompt-message">Введите что-нибудь...-->
+<!--            <br>Пожалуйста..</div>-->
+<!--        <input name="text" type="text">-->
+<!--        <input type="submit" value="Ok">-->
+<!--        <input type="button" name="cancel" value="Отмена">-->
+<!--    </form>-->
+<!--</div>-->
+
+<script src="jsTest.js"></script>
+<script src="add.js"></script>
+<script src="edit.js"></script>
+<script src="delete.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
 
