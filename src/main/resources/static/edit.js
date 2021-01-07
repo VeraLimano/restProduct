@@ -17,13 +17,11 @@ function edit(e) {
             name: namePr,
             price: pricePr,
         })
-    }).then(response=> {
-        return response;
     })
         .finally(() => {
             document.getElementById("table").click();
             getAll();
-            document.getElementById("editPR").reset;
+            document.getElementById("editPR").reset();
         })
 }
 

@@ -16,11 +16,6 @@ public class ProductController {
     @Autowired
     ProductService service;
 
-    @GetMapping(value = "/")
-    public String getHomePage() {
-        return "name22";
-    }
-
     @GetMapping("/products")
     public List<Product> list() {
         return service.listAll();
@@ -29,6 +24,7 @@ public class ProductController {
     @GetMapping("/products/{id}")
     public ResponseEntity<Product> get(@PathVariable Integer id) {
         try {
+//            if (id.equals())
             Product product = service.get(id);
             return new ResponseEntity<Product>(product, HttpStatus.OK);
         } catch (NoSuchElementException e) {
@@ -41,19 +37,6 @@ public class ProductController {
         service.save(product);
     }
 
-////    @PutMapping("/productsEdit/{id}")
-//    @PutMapping("/productsEdit")
-//    public ResponseEntity<?> update(@RequestBody Product product, @PathVariable Integer id) {
-//        try {
-//            Product existProduct = service.get(id);
-//            service.save(product);
-//            return new ResponseEntity<>(HttpStatus.OK);
-//        } catch (NoSuchElementException e) {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
-
-    //    @PutMapping("/productsEdit/{id}")
     @PutMapping("/productsEdit")
     public ResponseEntity<?> update(@RequestBody Product product) {
         try {
@@ -63,28 +46,6 @@ public class ProductController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
-//    //    @PutMapping("/productsEdit/{id}")
-//    @PutMapping("/productsEdit")
-//    public ResponseEntity<?> update(@RequestBody Product product, @PathVariable Integer id) {
-//        try {
-//            Product existProduct = service.get(id);
-//            service.save(product);
-//            return new ResponseEntity<>(HttpStatus.OK);
-//        } catch (NoSuchElementException e) {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
-
-//    @DeleteMapping("/products/{id}")
-//    public void delete(@PathVariable Integer id) {
-//        service.delete(id);
-//    }
-
-//    @DeleteMapping("/productsDelete")
-//    public void delete(@RequestBody Product product) {
-//        service.delete(product);
-//    }
 
     @DeleteMapping("/productsDelete/{id}")
     public void delete(@PathVariable Integer id) {

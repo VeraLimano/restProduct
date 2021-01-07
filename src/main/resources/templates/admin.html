@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <meta name="Access-Control-Allow-Origin" content="*" />-->
+    <!--    <meta name="Access-Control-Allow-Headers" content="*" />-->
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+</head>
+<body>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody id="table"></tbody>
+</table>
+
+<br>
+<form id="deleteUser">
+    Id <input name="id1" type="text" class="form-control" id="idDEL">
+    <button type="submit" class="btn btn-success">Delete </button>
+</form>
+
+<br>
+<form id="editUser">
+    Id <input type="text" class="form-control" id="id3">
+    Name <input type="text" class="form-control" id="name3">
+    Surname <input  type="text" class="form-control" id="surname3">
+    Age <input  type="text" class="form-control" id="age3">
+    Email <input  type="text" class="form-control" id="email3">
+    Password <input  type="text" class="form-control" id="password3">
+    Role
+    <select class="custom-select" id="role3" multiple size="2"
+            required>
+        <option value="ROLE_ADMIN" adminSelect>ADMIN</option>
+        <option value="ROLE_USER" userSelect>USER</option>
+    </select>
+    <button type="submit" class="btn btn-success">Edit </button>
+</form>
+
+<br>
+<form id="addUser">
+    Name <input type="text" class="form-control" id="name2">
+    Surname <input  type="text" class="form-control" id="surname2">
+    Age <input  type="text" class="form-control" id="age2">
+    Email <input  type="text" class="form-control" id="email2">
+    Password <input  type="text" class="form-control" id="password2">
+    Role
+    <select class="custom-select" id="role2" multiple size="2"
+            required>
+        <option value="ROLE_ADMIN" adminSelect>ADMIN</option>
+        <option value="ROLE_USER" userSelect>USER</option>
+    </select>
+
+    <button type="submit" class="btn btn-success">Add </button>
+</form>
+
+
+
+
+
+<!--<div id="prompt-form-container">-->
+<!--    <form id="prompt-form">-->
+<!--        <div id="prompt-message">Введите что-нибудь...-->
+<!--            <br>Пожалуйста..</div>-->
+<!--        <input name="text" type="text">-->
+<!--        <input type="submit" value="Ok">-->
+<!--        <input type="button" name="cancel" value="Отмена">-->
+<!--    </form>-->
+<!--</div>-->
+
+<script src="usTable.js"></script>
+<script src="usAdd.js"></script>
+<script src="usEdit.js"></script>
+<script src="usDelete.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

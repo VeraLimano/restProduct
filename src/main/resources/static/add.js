@@ -13,8 +13,6 @@ function add(e) {
             name: namePr,
             price: pricePr,
         })
-    }).then(response=> {
-        return response;
     })
         .finally(() => {
             document.getElementById("table").click();

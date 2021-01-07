@@ -3,17 +3,15 @@ document.getElementById("deletePR").addEventListener("submit", deleteProduct)
 function deleteProduct(e) {
     e.preventDefault();
 
-    let idPr = document.getElementById("idDEL").value;
+    let id = document.getElementById("idDEL").value;
 
-    fetch("http://localhost:8080/productsDelete/" + idPr, {
+    fetch("http://localhost:8080/productsDelete/" + id, {
         method: "DELETE"
-    }).then(response=> {
-        return response;
     })
         .finally(() => {
             document.getElementById("table").click();
             getAll();
-            document.getElementById("deletePR").reset;
+            document.getElementById("deletePR").reset();
         })
 }
 
